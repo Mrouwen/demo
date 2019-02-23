@@ -1,0 +1,26 @@
+<html>
+	<head>
+	<title>angularJs入门小demo-4 控制器</title>	
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script >
+		//建立模块
+		var app=angular.module("myApp",[]);
+		app.controller("myController",function($scope){
+			
+			$scope.list=[102,203,394,555];
+
+		});
+	</script>
+	</head>
+<body ng-app="myApp"  ng-controller="myController">
+<table>
+	<tr ng-repeat="x in list">
+		<td>{{x}}</td>
+
+	</tr>
+
+</table>
+
+</body>
+
+</html>

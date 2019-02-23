@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<title>angularJs入门小demo-4 控制器</title>	
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script >
+		//建立模块
+		var app=angular.module("myApp",[]);
+		app.controller("myController",function($scope){
+			
+			$scope.list=[
+				{name:'张三',shuxue:100,yuwen:100},
+				{name:'李三',shuxue:90,yuwen:58},
+				{name:'王三',shuxue:10,yuwen:10}
+			];
+
+		});
+	</script>
+	</head>
+<body ng-app="myApp"  ng-controller="myController">
+
+<table>
+	<tr>
+		<td>姓名</td>
+		<td>数学</td>
+		<td>语文</td>
+	</tr>
+	<tr ng-repeat="e in list">
+		<td>{{e.name}}</td>
+		<td>{{e.shuxue}}</td>
+		<td>{{e.yuwen}}</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

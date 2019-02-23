@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<title>angularJs入门小demo-4 控制器</title>	
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script >
+		//建立模块
+		var app=angular.module("myApp",[]);
+		app.controller("myController",function($scope){
+			$scope.add=function(){
+				return $scope.z = parseInt($scope.x)+parseInt($scope.y)
+			}
+
+		});
+	</script>
+	</head>
+<body ng-app="myApp"  ng-controller="myController">
+第一个数:<input ng-model="x"> 第二个数:<input ng-model="y">
+
+<button ng-click="add()"> </button>
+运算结果:{{z}}
+</body>
+
+</html>
